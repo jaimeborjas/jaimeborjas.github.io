@@ -22,7 +22,9 @@ body {
 .pointer {
 	cursor: pointer;
 }
-
+.body-container{
+	height: 100%;
+}
 .pointer-hover:hover {
 	background-color: #f7f7f7;
 }
@@ -121,6 +123,7 @@ body {
 /* Mobile Navigation */
 
 .nav-header {
+	position: sticky;
 	background-color: #fff;
 	padding-top: 80px;
 	display: none;
@@ -181,14 +184,14 @@ body {
 	.header li {
 		display: none;
 	}
+	
 }
 
 /* Footer */
 
 .footer-container {
 	background: #fff;
-	position: absolute;
-	bottom: 0;
+	width: 100%;
 	width: 100%;
 	height: 3rem;
 	display: flex;
@@ -241,7 +244,7 @@ body {
 
 @media screen and (max-width: 768px) {
 	.footer-container {
-		height: 9rem;
+		height: 5rem;
 		flex-direction: column;
 		align-items: center;
 		align-content: center;
@@ -258,14 +261,15 @@ body {
 		margin: 0;
 		padding: 0;
 	}
-	#content-wrap {
-		padding-bottom: 9rem;
+	.vertical-spacing {
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 }
 
 @media screen and (max-width: 330px) {
 	.footer-container {
-		height: 12rem;
+		max-height: 8rem
 	}
 	.legal-list {
 		flex-direction: column;
@@ -273,8 +277,5 @@ body {
 		align-content: center;
 		justify-content: center;
 		gap: 20px;
-	}
-	#content-wrap {
-		padding-bottom: 12rem;
 	}
 }

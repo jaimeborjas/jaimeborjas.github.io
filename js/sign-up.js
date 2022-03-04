@@ -70,12 +70,8 @@ function sendData() {
     body: json,
   })
     .then((res) => {
-      if(res.ok) {
-        return res.json();
-      } else {
-        throw(new Error("User not found"))
-      }
-      
+      if(!res.ok) throw Error("User not found");
+      return res.json();
     })
     .then((res) => {
       localStorage.setItem('token', res['token']);
@@ -100,9 +96,6 @@ function getData() {
     method: 'GET',
   })
     .then((res) => {
-      //if (res.ok)
-      //data = JSON.parse(res);
-
       return res.json();
     })
     .then((res) => {
